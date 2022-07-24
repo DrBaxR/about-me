@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "about-me-f2b2b",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

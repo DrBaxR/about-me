@@ -21,6 +21,7 @@ h1 {
 
 p {
   font-family: 'Roboto Condensed', sans-serif;
+  color: var(--primary-text);
 }
 
 .wrapper {
@@ -38,8 +39,25 @@ p {
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
+  position: relative;
 }
 
-.view--secondary {
+.view--second, .view--third {
   background-color: var(--secondary);
+}
+
+.view--first {
+  background: url('../res/waves.svg') no-repeat bottom;
+  background-size: 100%;
+}
+
+.view--last {
+  background: url('../res/waves-end.svg') no-repeat top;
+  background-size: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .view--first, .view--last {
+    background-size: auto;
+  }
 }

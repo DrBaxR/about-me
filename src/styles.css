@@ -8,6 +8,7 @@
   --typewriter-speed: 1.5s;
   --typewriter-characters: 11;
   --typewriter-delay: 500ms;
+  --typewriter-bg-color: var(--primary);
   --blink-speed: 750ms;
 }
 
@@ -39,6 +40,10 @@ button {
   cursor: pointer;
 }
 
+.secondary-text {
+  color: var(--secondary-text);
+}
+
 .wrapper {
   scroll-behavior: smooth;
   height: 100vh;
@@ -55,6 +60,11 @@ button {
   position: relative;
 }
 
+.typewriter-name--mam {
+  --typewriter-characters: 13;
+  --typewriter-bg-color: var(--secondary);
+}
+
 .typewriter-name::before,
 .typewriter-name::after {
   content: '';
@@ -66,7 +76,7 @@ button {
 }
 
 .typewriter-name::before {
-  background-color: var(--primary);
+  background-color: var(--typewriter-bg-color);
   animation: typewriter var(--typewriter-speed) steps(var(--typewriter-characters)) var(--typewriter-delay) forwards;
 }
 
@@ -113,6 +123,30 @@ button {
   scroll-snap-align: start;
   position: relative;
   padding: 0 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.view-content {
+  max-width: 1700px;
+  width: 90%;
+}
+
+.view-content--first {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10em;
+}
+
+.view-content--second {
+  margin-top: 10em;
+}
+
+.more-about-me {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .view--second, .view--third {
@@ -120,19 +154,16 @@ button {
 }
 
 .view--first {
-  background: url('../res/waves.svg') no-repeat bottom;
+  background: url('https://firebasestorage.googleapis.com/v0/b/personal-blog-5678d.appspot.com/o/me%2Fwaves.svg?alt=media&token=d38c748f-df13-4947-818f-f1ccbfccf356') no-repeat bottom;
   background-size: 100%;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .view--last {
-  background: url('../res/waves-end.svg') no-repeat top;
+  background: url('https://firebasestorage.googleapis.com/v0/b/personal-blog-5678d.appspot.com/o/me%2Fwaves-end.svg?alt=media&token=f10c500e-e548-4cda-8907-f9ca88441ae4') no-repeat top;
   background-size: 100%;
 }
 
 .hero {
-  margin-top: 10em;
   max-width: 1000px;
   display: flex;
   flex-direction: column;

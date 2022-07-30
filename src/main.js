@@ -1,14 +1,20 @@
 const callToActionButton = document.getElementById('call-to-action');
-const secondSection = document.querySelector('.view--second');
+const secondButton = document.getElementById('second-button');
+const thirdButton = document.getElementById('third-button');
 
-callToActionButton.addEventListener('click', () => secondSection.scrollIntoView())
+const secondSection = document.querySelector('.view--second');
+const thirdSection = document.querySelector('.view--third');
+const fourthSection = document.querySelector('.view--last');
+
+callToActionButton.addEventListener('click', () => secondSection.scrollIntoView());
+secondButton.addEventListener('click', () => thirdSection.scrollIntoView());
+thirdButton.addEventListener('click', () => fourthSection.scrollIntoView());
 
 // intersection observers
 const secondContent = document.querySelector('.view-content--second');
 const secondHeader = document.querySelector('.more-about-me__header');
 const secondParagraph1 = document.querySelector('.more-about-me__paragraph-1');
 const secondParagraph2 = document.querySelector('.more-about-me__paragraph-2');
-const secondPicture = document.querySelector('.profile-picture');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -17,7 +23,7 @@ const observer = new IntersectionObserver(entries => {
       secondHeader.classList.add('typewriter-name', 'typewriter-name--mam');
       secondParagraph1.classList.add('fadeable', 'fadeable--1');
       secondParagraph2.classList.add('fadeable', 'fadeable--2');
-      secondPicture.classList.add('fadeable', 'fadeable--3');
+      secondButton.classList.add('fadeable', 'fadeable--3');
     }
   })
 });

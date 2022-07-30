@@ -164,13 +164,6 @@ button {
   align-items: flex-start;
 }
 
-.profile-picture {
-  width: 400px;
-  height: 400px;
-  border-radius: 3em;
-  box-shadow: 1em 1em var(--primary);
-}
-
 .view--second, .view--third {
   background-color: var(--secondary);
 }
@@ -268,6 +261,25 @@ button {
   margin: 0.5em 0;
 }
 
+.next-button {
+  position: absolute;
+  border: 1px solid var(--primary-text);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  bottom: 1em;
+  left: 50%;
+}
+
+.next-button__icon {
+  transform: translateX(-1px) translateY(0);
+  animation: down 1s ease-in infinite;
+}
+
+.next-button__line {
+  stroke: var(--primary-text);
+}
+
 @keyframes typewriter {
   to {
     left: 100%;
@@ -299,6 +311,12 @@ button {
   100% {
     transform: translateY(0);
   } 
+}
+
+@keyframes down {
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 @keyframes fade-in {

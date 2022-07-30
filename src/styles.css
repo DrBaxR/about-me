@@ -293,7 +293,7 @@ button {
   }
 
   45% {
-    transform: translateY(-20px);
+    transform: translateY(-40px);
   }
   
   100% {
@@ -319,4 +319,13 @@ button {
 
 @media screen and (max-width: 900px) {
   /* TODO */
+}
+
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
 }

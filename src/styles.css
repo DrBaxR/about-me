@@ -20,7 +20,7 @@ body, h1 {
   margin: 0;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Roboto Mono', monospace;
   color: var(--accent);
 }
@@ -129,6 +129,53 @@ button {
   font-size: 6rem;
 }
 
+.header--small {
+  font-size: 3rem;
+  color: var(--primary-text);
+}
+
+.card {
+  padding: 1em;
+  border: 1px solid var(--secondary-text);
+  background-color: var(--primary);
+  border-radius: 1em;
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2rem;
+  color: var(--secondary-text);
+}
+
+.card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  border: 1px solid var(--secondary-text);
+  border-radius: 1em;
+  z-index: -1;
+}
+
+.card--accent {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.card--accent::after {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 13em);
+  row-gap: 2em;
+  column-gap: 4em;
+}
+
 .view {
   height: 100vh;
   width: 100%;
@@ -157,6 +204,12 @@ button {
   justify-content: space-between;
 }
 
+.view-content--third {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .more-about-me {
   max-width: 1000px;
   display: flex;
@@ -173,6 +226,10 @@ button {
   background-size: 100%;
 }
 
+.view--third {
+  flex-direction: column;
+  z-index: 1;
+}
 
 .bubbles {
   position: absolute;
@@ -278,6 +335,14 @@ button {
 
 .next-button__line {
   stroke: var(--primary-text);
+}
+
+.workplaces {
+  align-self: flex-start;
+}
+
+.technologies {
+  align-self: flex-end;
 }
 
 @keyframes typewriter {

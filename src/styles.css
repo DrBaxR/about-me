@@ -8,6 +8,7 @@
   --typewriter-speed: 1.5s;
   --typewriter-characters: 11;
   --typewriter-delay: 500ms;
+  --typewriter-color: var(--accent);
   --typewriter-bg-color: var(--primary);
   --blink-speed: 750ms;
 }
@@ -82,7 +83,7 @@ button {
 
 .typewriter-name::after {
   width: 0.1em;
-  background-color: var(--accent);
+  background-color: var(--typewriter-color);
   animation: 
     typewriter var(--typewriter-speed) steps(var(--typewriter-characters)) var(--typewriter-delay) forwards,
     blink var(--blink-speed) steps(var(--typewriter-characters)) infinite;
@@ -110,6 +111,18 @@ button {
   opacity: 0;
   transform: translateY(3rem);
   animation: fade-in-up 1s ease forwards;
+}
+
+.fadeable--01 {
+  animation-delay: 0.5s;
+}
+
+.fadeable--02 {
+  animation-delay: 1s;
+}
+
+.fadeable--03 {
+  animation-delay: 1.5s;
 }
 
 .fadeable--1 {

@@ -16,7 +16,11 @@ const secondHeader = document.querySelector('.more-about-me__header');
 const secondParagraph1 = document.querySelector('.more-about-me__paragraph-1');
 const secondParagraph2 = document.querySelector('.more-about-me__paragraph-2');
 
-const observer = new IntersectionObserver(entries => {
+const thirdContent = document.querySelector('.view-content--third')
+const workplaces = document.querySelector('.workplaces');
+const technologies = document.querySelector('.technologies');
+
+const observer1 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // trigger animations
@@ -28,4 +32,15 @@ const observer = new IntersectionObserver(entries => {
   })
 });
 
-observer.observe(secondContent);
+const observer2 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      workplaces.classList.add('fadeable', 'fadeable--01');
+      technologies.classList.add('fadeable', 'fadeable--02');
+      thirdButton.classList.add('fadeable', 'fadeable--03');
+    }
+  })
+})
+
+observer1.observe(secondContent);
+observer2.observe(thirdContent);

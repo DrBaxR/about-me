@@ -414,33 +414,33 @@ button {
   height: 75%;
   border-radius: 1em;
   margin-bottom: 1em;
-  overflow: hidden;
 }
 
 .project-card__overlay {
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
   opacity: 0.9;
   position: absolute;
   z-index: 1;
   background-color: var(--primary);
+  border-radius: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .project-card__window--messenger {
-  background-image: url('../res/messenger-thmb.png');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/personal-blog-5678d.appspot.com/o/me%2Fmessenger-thmb.png?alt=media&token=1b28a20d-3f06-4cf0-bc89-6a90676fd928');
   background-size: cover;
 }
 
 .project-card__window--builder {
-  background-image: url('../res/pb-builder-thmb.png');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/personal-blog-5678d.appspot.com/o/me%2Fpb-builder-thmb.png?alt=media&token=ffe3a821-e073-41dd-824f-b3cb9ed69487');
   background-size: cover;
 }
 
 .project-card__window--blog {
-  background-image: url('../res/personal-blog-thmb.png');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/personal-blog-5678d.appspot.com/o/me%2Fpersonal-blog-thmb.png?alt=media&token=61c6aa54-9f89-4cb9-8efd-cab9baa67e4e');
   background-size: cover;
 }
 

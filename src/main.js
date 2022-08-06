@@ -20,6 +20,13 @@ const thirdContent = document.querySelector('.view-content--third')
 const workplaces = document.querySelector('.workplaces');
 const technologies = document.querySelector('.technologies');
 
+const lastContent = document.querySelector('.view-content--last');
+const someProjectsHeader = document.querySelector('.header--some-projects');
+const blog = document.querySelector('.project-card--blog');
+const messenger = document.querySelector('.project-card--messenger');
+const builder = document.querySelector('.project-card--builder');
+const more = document.querySelector('.more');
+
 const observer1 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -42,5 +49,18 @@ const observer2 = new IntersectionObserver(entries => {
   })
 })
 
+const observer3 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      someProjectsHeader.classList.add('fadeable', 'fadeable--01');
+      messenger.classList.add('fadeable', 'fadeable--02');
+      blog.classList.add('fadeable', 'fadeable--03');
+      builder.classList.add('fadeable', 'fadeable--04');
+      more.classList.add('fadeable', 'fadeable--05');
+    }
+  })
+})
+
 observer1.observe(secondContent);
 observer2.observe(thirdContent);
+observer3.observe(lastContent);

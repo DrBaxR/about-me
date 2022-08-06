@@ -125,6 +125,14 @@ button {
   animation-delay: 1.5s;
 }
 
+.fadeable--04 {
+  animation-delay: 2s;
+}
+
+.fadeable--05 {
+  animation-delay: 2.5s;
+}
+
 .fadeable--1 {
   animation-delay: calc(var(--typewriter-speed) + 1s);
 }
